@@ -39,14 +39,14 @@ export function MobileMenu({
           transition={{ duration: 0.18 }}
           className="border-t border-[var(--border-soft)] bg-white/95 backdrop-blur-md lg:hidden"
         >
-          <div className="mx-auto w-full max-w-[1280px] px-4 py-5 sm:px-6">
+          <div className="mx-auto w-full max-w-[1280px] px-4 py-4 sm:px-6">
             <div className="space-y-1">
               {classesItem && classesItem.children ? (
                 <div>
                   <button
                     type="button"
                     onClick={onToggleClasses}
-                    className="flex w-full items-center justify-between rounded-2xl px-3 py-3 text-left text-sm font-semibold text-[var(--text-secondary)] transition-colors hover:bg-[var(--surface-soft)] hover:text-[var(--text-primary)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--blue-600)]"
+                    className="flex w-full items-center justify-between rounded-2xl px-3 py-2.5 text-left text-sm font-semibold text-[var(--text-secondary)] transition-colors hover:bg-[var(--surface-soft)] hover:text-[var(--text-primary)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--blue-600)]"
                     aria-expanded={classesOpen}
                   >
                     Clases
@@ -71,7 +71,7 @@ export function MobileMenu({
                     href={item.href}
                     onClick={onClose}
                     className={cn(
-                      "block rounded-2xl px-3 py-3 text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--blue-600)]",
+                      "block rounded-2xl px-3 py-2.5 text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--blue-600)]",
                       "text-[var(--text-secondary)] hover:bg-[var(--surface-soft)] hover:text-[var(--text-primary)]",
                     )}
                   >
@@ -81,7 +81,7 @@ export function MobileMenu({
               })}
             </div>
 
-            <div className="mt-5 flex items-center gap-3">
+            <div className="mt-4 flex items-center gap-3">
               <Button
                 className="w-full"
                 onClick={() => {

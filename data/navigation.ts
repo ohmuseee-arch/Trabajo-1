@@ -5,9 +5,9 @@ export const navigationItems: NavigationItem[] = [
     label: "Clases",
     href: "/#clases",
     children: [
-      { label: "Clases en directo", href: "/#clases-directo" },
-      { label: "Clases grabadas", href: "/#clases-grabadas" },
-      { label: "Clases destacadas", href: "/#clases-destacadas" },
+      { label: "En directo", href: "/#clases-directo" },
+      { label: "Grabadas", href: "/#clases-grabadas" },
+      { label: "Destacadas", href: "/#clases-destacadas" },
     ],
   },
   { label: "Progreso", href: "/#progreso" },

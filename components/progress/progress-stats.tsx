@@ -19,12 +19,12 @@ export function ProgressStats() {
         return (
           <article
             key={stat.id}
-            className="rounded-[28px] border border-[var(--border-soft)] bg-white p-6 shadow-[var(--shadow-card)]"
+            className="rounded-[26px] border border-[var(--border-soft)] bg-white p-5 shadow-[var(--shadow-card)]"
           >
             <span className="inline-flex size-12 items-center justify-center rounded-2xl bg-[var(--surface-soft)] text-[var(--blue-600)]">
               <Icon className="size-5" />
             </span>
-            <p className="mt-5 text-[38px] font-bold leading-none tracking-tight text-[var(--text-primary)]">
+            <p className="mt-4 text-[34px] font-bold leading-none tracking-tight text-[var(--text-primary)]">
               {stat.value}
             </p>
             <p className="mt-2 text-sm font-semibold text-[var(--text-primary)]">{stat.label}</p>

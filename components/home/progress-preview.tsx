@@ -4,14 +4,10 @@ import { SectionHeading } from "@/components/ui/section-heading";
 
 export function ProgressPreview() {
   return (
-    <section id="progreso" className="py-20">
+    <section id="progreso" className="py-14 sm:py-16">
       <Container>
-        <SectionHeading
-          eyebrow="Tu progreso"
-          title="Un resumen rapido para leer tu actividad sin friccion"
-          description="Cuatro metricas bien presentadas para transmitir avance, constancia y ritmo de entrenamiento."
-        />
-        <div className="mt-8">
+        <SectionHeading eyebrow="Progreso" title="Tu actividad" />
+        <div className="mt-6">
           <ProgressStats />
         </div>
       </Container>

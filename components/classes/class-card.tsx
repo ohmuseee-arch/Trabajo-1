@@ -28,7 +28,7 @@ const levelClassMap = {
 export function ClassCard({ classItem }: ClassCardProps) {
   return (
     <article className="group overflow-hidden rounded-[30px] border border-[var(--border-soft)] bg-white shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-soft)]">
-      <div className="relative h-56 overflow-hidden">
+      <div className="relative h-48 overflow-hidden">
         <Image
           src={classItem.image}
           alt={`Clase online ${classItem.title}`}
@@ -55,17 +55,17 @@ export function ClassCard({ classItem }: ClassCardProps) {
         ) : null}
       </div>
 
-      <div className="space-y-4 p-5">
-        <div className="space-y-2">
+      <div className="space-y-3 p-4 sm:p-5">
+        <div className="space-y-1.5">
           <div className="flex items-start justify-between gap-4">
             <div>
-              <h3 className="text-xl font-bold tracking-tight text-[var(--text-primary)]">
+              <h3 className="text-lg font-bold tracking-tight text-[var(--text-primary)] sm:text-xl">
                 {classItem.title}
               </h3>
-              <p className="mt-1 text-sm text-[var(--text-secondary)]">{classItem.description}</p>
+              <p className="mt-1 text-sm leading-6 text-[var(--text-secondary)]">{classItem.description}</p>
             </div>
             <span className="inline-flex shrink-0 rounded-full bg-[var(--surface-soft)] px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.1em] text-[var(--text-tertiary)]">
-              {classItem.format === "directo" ? "Reserva" : "Lista ahora"}
+              {classItem.format === "directo" ? "Directo" : "Disponible"}
             </span>
           </div>
           <p className="text-sm font-medium text-[var(--text-secondary)]">{classItem.trainer}</p>

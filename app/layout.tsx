@@ -11,7 +11,7 @@ const geist = Geist({
 export const metadata: Metadata = {
   title: "FitVirtual | Plataforma de entrenamiento online",
   description:
-    "Plataforma fitness online con clases guiadas, seguimiento de progreso, planificación semanal y entrenador personal.",
+    "Plataforma fitness online con clases guiadas, progreso claro y entrenador personal.",
 };
 
 export default function RootLayout({

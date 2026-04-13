@@ -56,7 +56,7 @@ export function Header({ onOpenTrainer }: HeaderProps) {
 
   return (
     <header className="sticky top-0 z-50 border-b border-[var(--border-soft)] bg-white/80 backdrop-blur-xl">
-      <Container className="flex h-20 items-center justify-between gap-6">
+      <Container className="flex h-[72px] items-center justify-between gap-6">
         <Link
           href="/"
           onClick={closeAllMenus}
@@ -104,7 +104,7 @@ export function Header({ onOpenTrainer }: HeaderProps) {
                 href={item.href}
                 onClick={closeAllMenus}
                 className={cn(
-                  "rounded-2xl px-4 py-2.5 text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--blue-600)]",
+                  "rounded-2xl px-4 py-2 text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--blue-600)]",
                   "text-[var(--text-secondary)] hover:bg-[var(--surface-soft)] hover:text-[var(--text-primary)]",
                 )}
               >
@@ -121,7 +121,7 @@ export function Header({ onOpenTrainer }: HeaderProps) {
         <button
           type="button"
           onClick={() => setMobileOpen((state) => !state)}
-          className="inline-flex size-11 items-center justify-center rounded-2xl border border-[var(--border-soft)] bg-white text-[var(--text-primary)] shadow-sm transition-colors hover:bg-[var(--surface-soft)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--blue-600)] lg:hidden"
+          className="inline-flex size-10 items-center justify-center rounded-2xl border border-[var(--border-soft)] bg-white text-[var(--text-primary)] shadow-sm transition-colors hover:bg-[var(--surface-soft)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--blue-600)] lg:hidden"
           aria-label={mobileOpen ? "Cerrar menu" : "Abrir menu"}
           aria-expanded={mobileOpen}
         >

@@ -22,13 +22,13 @@ export function SectionHeading({
           {eyebrow}
         </p>
       ) : null}
-      <h2 className="mt-3 text-3xl font-bold tracking-tight text-[var(--text-primary)] sm:text-4xl">
+      <h2 className="mt-2 text-[30px] font-bold tracking-tight text-[var(--text-primary)] sm:text-[36px]">
         {title}
       </h2>
       {description ? (
         <p
           className={cn(
-            "mt-4 max-w-2xl text-sm leading-7 text-[var(--text-secondary)] sm:text-base",
+            "mt-3 max-w-xl text-sm leading-6 text-[var(--text-secondary)] sm:text-[15px]",
             align === "center" && "mx-auto",
           )}
         >

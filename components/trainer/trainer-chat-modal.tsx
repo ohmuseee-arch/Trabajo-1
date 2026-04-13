@@ -13,6 +13,12 @@ export function TrainerChatModal({ open, onClose }: TrainerChatModalProps) {
   const [message, setMessage] = useState("");
   const [sent, setSent] = useState(false);
 
+  function handleClose() {
+    setMessage("");
+    setSent(false);
+    onClose();
+  }
+
   useEffect(() => {
     if (!open) {
       return;
@@ -20,6 +26,8 @@ export function TrainerChatModal({ open, onClose }: TrainerChatModalProps) {
 
     function onEscape(event: KeyboardEvent) {
       if (event.key === "Escape") {
+        setMessage("");
+        setSent(false);
         onClose();
       }
     }
@@ -50,7 +58,7 @@ export function TrainerChatModal({ open, onClose }: TrainerChatModalProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            onClick={onClose}
+            onClick={handleClose}
           />
 
           <motion.div
@@ -79,7 +87,7 @@ export function TrainerChatModal({ open, onClose }: TrainerChatModalProps) {
                 <button
                   type="button"
                   className="inline-flex size-9 items-center justify-center rounded-full bg-white/15 hover:bg-white/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
-                  onClick={onClose}
+                  onClick={handleClose}
                   aria-label="Cerrar chat"
                 >
                   <X size={18} />
@@ -88,13 +96,13 @@ export function TrainerChatModal({ open, onClose }: TrainerChatModalProps) {
 
               <div className="space-y-4 p-5">
                 <div className="rounded-3xl border border-[var(--border-soft)] bg-[var(--surface-soft)] p-4 text-sm text-[var(--text-secondary)]">
-                  ¡Hola! Soy Carlos, tu entrenador personal. ¿En qué puedo ayudarte hoy?
+                  Hola, soy Carlos. ¿En qué puedo ayudarte hoy?
                 </div>
 
                 {sent ? (
                   <div className="flex items-center gap-2 rounded-2xl bg-[var(--green-100)] px-4 py-3 text-sm font-medium text-[var(--green-700)]">
                     <Sparkles size={16} />
-                    Mensaje recibido. Te respondere con recomendaciones en breve.
+                    Mensaje enviado. Te responderé en breve.
                   </div>
                 ) : null}
 
@@ -108,7 +116,7 @@ export function TrainerChatModal({ open, onClose }: TrainerChatModalProps) {
                       type="text"
                       value={message}
                       onChange={(event) => setMessage(event.target.value)}
-                      placeholder="Escribe tu mensaje..."
+                      placeholder="Escribe tu mensaje"
                       className="h-12 w-full rounded-xl border border-[var(--border-soft)] bg-white px-4 pr-12 text-sm text-[var(--text-primary)] placeholder:text-[var(--text-tertiary)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--blue-600)]"
                     />
                     <button
@@ -122,7 +130,7 @@ export function TrainerChatModal({ open, onClose }: TrainerChatModalProps) {
                   </div>
 
                   <p className="text-xs font-medium text-[var(--text-tertiary)]">
-                    Tiempo de respuesta promedio: 5 minutos
+                    Tiempo medio de respuesta: 5 minutos
                   </p>
                 </form>
               </div>
